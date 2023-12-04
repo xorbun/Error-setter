@@ -51,7 +51,7 @@ public class Main
             throw new NumberLessThanZeroException(0);
         }
         //ESERCIZIO 3
-        
+        ContoCorrente utente=new ContoCorrente();
 
 
         input.close();
