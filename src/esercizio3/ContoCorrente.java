@@ -16,7 +16,8 @@ public class ContoCorrente
     }
     public void preleva(double x) throws BancaException
     {
-
+        try
+        {
             if (x > 0)
             {
                 if (nMovimenti < maxMovimenti)
@@ -32,8 +33,11 @@ public class ContoCorrente
             {
                 throw new BancaException("non hai più soldi");
             }
-
-
+        }
+        catch(BancaException e)
+        {
+            System.out.println(e.getMessage());
+        }
 
 
     }

@@ -24,7 +24,6 @@ public class Main
             choose=input.nextInt();
             try
             {
-
                 vett[choose]=new Arrayofnumber();
                 for (int i=0;i< vett.length;i++)
                 {

@@ -5,6 +5,6 @@ public class BancaException extends Exception
 
     public BancaException(String message)
     {
-        super(message);
+        super("non hai più soldi");
     }
 }
