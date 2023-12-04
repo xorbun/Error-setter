@@ -41,7 +41,7 @@ public class Main
 
 
         //ESERCIZIO 2
-        Consumiauto panda=new Consumiauto(350,0);
+        Consumiauto panda=new Consumiauto(350,20);
         try
         {
             System.out.println(panda.rapportoconsumo());
@@ -51,8 +51,8 @@ public class Main
             throw new NumberLessThanZeroException(0);
         }
         //ESERCIZIO 3
-        ContoCorrente utente=new ContoCorrente();
-        System.out.println("prova");
+        ContoCorrente utente=new ContoCorrente("mario",0);
+        utente.preleva(-2);
 
 
         input.close();
