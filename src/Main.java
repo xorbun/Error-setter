@@ -1,5 +1,7 @@
 import esercizio1.Arrayofnumber;
-import exception.Invalidindex;
+import esercizio2.Consumiauto;
+import esercizio3.ContoCorrente;
+import exception.NumberLessThanZeroException;
 
 import java.util.Scanner;
 
@@ -7,6 +9,7 @@ public class Main
 {
     public static void main(String[] args)
     {
+        //ESERCIZIO 1
         Scanner input=new Scanner(System.in);
         Arrayofnumber [] vett=new Arrayofnumber[5];
         for (int i = 0; i < vett.length; i++)
@@ -34,6 +37,23 @@ public class Main
             };
          }
         while (choose!=0);
+
+
+
+        //ESERCIZIO 2
+        Consumiauto panda=new Consumiauto(350,0);
+        try
+        {
+            System.out.println(panda.rapportoconsumo());
+        }
+        catch(RuntimeException e)
+        {
+            throw new NumberLessThanZeroException(0);
+        }
+        //ESERCIZIO 3
+        
+
+
         input.close();
     }
 }
