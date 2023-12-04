@@ -1,17 +1,39 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import esercizio1.Arrayofnumber;
+import exception.Invalidindex;
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+import java.util.Scanner;
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner input=new Scanner(System.in);
+        Arrayofnumber [] vett=new Arrayofnumber[5];
+        for (int i = 0; i < vett.length; i++)
+        {
+             vett[i]=new Arrayofnumber();
+             System.out.println(vett[i]);
         }
+        System.out.println("in quale posizione vuoi inserire un valore?");
+        int choose;
+        do
+        {
+            choose=input.nextInt();
+            try
+            {
+
+                vett[choose]=new Arrayofnumber();
+                for (int i=0;i< vett.length;i++)
+                {
+                    System.out.println(vett[i]);
+                }
+            }
+            catch(ArrayIndexOutOfBoundsException e)
+            {
+                System.out.println(e.getMessage());
+            };
+         }
+        while (choose!=0);
+        input.close();
     }
 }
