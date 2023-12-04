@@ -1,6 +1,6 @@
 package exception;
 
-public class BancaException extends RuntimeException
+public class BancaException extends Exception
 {
 
     public BancaException(String message)

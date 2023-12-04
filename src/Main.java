@@ -1,14 +1,14 @@
 import esercizio1.Arrayofnumber;
 import esercizio2.Consumiauto;
 import esercizio3.ContoCorrente;
+import exception.BancaException;
 import exception.NumberLessThanZeroException;
 
 import java.util.Scanner;
 
 public class Main
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws BancaException {
         //ESERCIZIO 1
         Scanner input=new Scanner(System.in);
         Arrayofnumber [] vett=new Arrayofnumber[5];
@@ -52,8 +52,7 @@ public class Main
         }
         //ESERCIZIO 3
         ContoCorrente utente=new ContoCorrente("mario",0);
-        utente.preleva(-2);
-
+        utente.preleva(-1);
 
         input.close();
     }

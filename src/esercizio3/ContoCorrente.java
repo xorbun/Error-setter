@@ -14,15 +14,15 @@ public class ContoCorrente
         this.saldo=saldo;
         nMovimenti=0;
     }
-    public void preleva(double x) throws BancaException {
+    public void preleva(double x) throws BancaException
+    {
 
-            if(saldo>0)
+            if (x > 0)
             {
                 if (nMovimenti < maxMovimenti)
                 {
                     saldo = saldo - x;
-                }
-                else
+                } else
                 {
                     saldo = saldo - x - 0.50;
                     nMovimenti++;
@@ -32,6 +32,10 @@ public class ContoCorrente
             {
                 throw new BancaException("non hai più soldi");
             }
+
+
+
+
     }
     double Restituiscisaldo()
     {
