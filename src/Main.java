@@ -52,6 +52,7 @@ public class Main
         }
         //ESERCIZIO 3
         ContoCorrente utente=new ContoCorrente();
+        System.out.println("prova");
 
 
         input.close();
